@@ -2,6 +2,9 @@ node {
   stage ('Clone Repository') {
   checkout scm
       }
+ stage ('Removee Docker Image'){
+sh "docker rm wanyama:1.0 -f"
+}
   stage ('Build a Docker Image'){
   sh "docker build -t wanyama:1.0 ."
   }
