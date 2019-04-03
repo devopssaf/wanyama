@@ -3,7 +3,7 @@ node {
   checkout scm
       }
  stage ('Removee Docker Image'){
-sh "docker rm 715176f26799 -f"
+sh "docker rmi 715176f26799 -f"
 }
   stage ('Build a Docker Image'){
   sh "docker build -t wanyama:1.0 ."
