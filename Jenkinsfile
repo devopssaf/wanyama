@@ -6,6 +6,6 @@ node {
   sh "docker build -t wanyama:1.0 ."
   }
   stage ('Deploy Docker 2 Image'){
-   sh "docker container run --detach --publish 8190:80 --name first_web_t wanyama:1.0"
+   sh "docker container run --detach --publish 8191:80 --name first_web_a wanyama:1.0"
   }
   }
